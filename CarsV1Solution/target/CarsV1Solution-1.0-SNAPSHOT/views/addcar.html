@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html ng-app="DemoApp" ng-controller="AddEditController as ctrl" >
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>{{ctrl.title}}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.7/i18n/angular-locale_da.js"></script>
+        
+    </head>
+    <body>
+        <div class="col-md-3" style="border: thin lightblue solid; 
+             border-radius: 5px;padding: 1em;" >
+            <form>
+                <label>Year</label> <input type="text" name="year" placeholder="Year" ng-model="ctrl.addEditCar(newcar.year)"> 
+                <br/>
+                <label>Registered</label> <input type="date" name="registered" 
+                                                 placeholder="dd/mm/yyyy" ng-model="ctrl.addEditCar(newcar.registered)"> 
+                <br/>
+                <label>Make</label> <input type="text" name="make" placeholder="Make" ng-model="ctrl.addEditCar(newcar.make)"> 
+                <br/>
+                <label>Model</label> <input type="text" name="model" placeholder="Model" ng-model="ctrl.addEditCar(newcar.model)"> 
+                <br/>
+                <label>Description</label> <input type="text" name="description" 
+                                                  placeholder="Description" ng-model="ctrl.addEditCar(newcar.description)">
+                <br/>
+                <label>Price</label> <input type="number" name="price" placeholder="Price" ng-model="ctrl.addEditCar(newcar.price)"> 
+                <br/>
+
+                <input type="submit" value="Submit" ng-click="ctrl.addEditCar()" class="btn">
+                <br/>
+            </form>
+        </div>
+    </body>
+</html>
